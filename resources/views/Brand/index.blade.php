@@ -8,26 +8,37 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
+
     <div class="min-h-screen">
         <!-- Navigation -->
-        <nav class="bg-white shadow-lg">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="flex justify-between h-16">
-                    <div class="flex">
-                        <div class="flex-shrink-0 flex items-center">
-                            <i class="fas fa-boxes text-blue-600 text-2xl mr-2"></i>
-                            <span class="text-xl font-bold text-gray-800">Gestion des Marques</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <a href="{{ route('brand.create') }}" 
-                           class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
-                           Ajouter une Marque
-                        </a>
-                    </div>
-                </div>
+     
+        <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Bouton retour -->
+            <div class="flex items-center space-x-4">
+                <a href="/products" class="text-gray-600 hover:text-blue-600 flex items-center">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    <span class="font-medium">Retour</span>
+                </a>
             </div>
-        </nav>
+
+            <!-- Titre principal -->
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-boxes text-blue-600 text-2xl"></i>
+                <span class="text-xl font-bold text-gray-800">Gestion des Marques</span>
+            </div>
+
+            <!-- Bouton Ajouter une Marque -->
+            <div>
+                <a href="{{ route('brand.create') }}" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200">
+                    Ajouter une Marque
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
 
         <!-- Main Content -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

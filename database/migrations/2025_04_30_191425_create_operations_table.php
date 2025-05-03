@@ -16,6 +16,8 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('action'); // ajout, modification, suppression
             $table->string('product_name');
+            $table->json('changes')->nullable(); // to save what changed
+
             $table->timestamps();
         });
         
